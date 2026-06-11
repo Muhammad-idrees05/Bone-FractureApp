@@ -1,0 +1,129 @@
+/* =========================
+   GLOBAL THEME (CT / MRI STYLE)
+========================= */
+
+body {
+    background-color: #070b14;
+    font-family: "Segoe UI", sans-serif;
+    color: #e0f7ff;
+}
+
+/* =========================
+   TITLE (GLOW EFFECT)
+========================= */
+.title {
+    font-size: 42px;
+    font-weight: 800;
+    text-align: center;
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff, 0 0 25px #00b4d8;
+    margin-top: 10px;
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+.subtitle {
+    text-align: center;
+    color: #7fdfff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   SIDEBAR PANEL
+========================= */
+section[data-testid="stSidebar"] {
+    background-color: #0b1220;
+    border-right: 1px solid #00b4d8;
+}
+
+/* =========================
+   BUTTONS (MEDICAL UI STYLE)
+========================= */
+.stButton > button {
+    background: linear-gradient(90deg, #00b4d8, #0077b6);
+    color: white;
+    border-radius: 12px;
+    height: 45px;
+    width: 220px;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 180, 216, 0.5);
+    transition: 0.3s ease;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 180, 216, 0.8);
+}
+
+/* =========================
+   IMAGE CARDS (X-RAY LOOK)
+========================= */
+img {
+    border-radius: 12px;
+    border: 2px solid rgba(0, 229, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.15);
+}
+
+/* =========================
+   INFO BOX (RESULT PANEL)
+========================= */
+.stAlert {
+    border-radius: 10px;
+}
+
+/* Success box */
+div[data-baseweb="notification"][kind="success"] {
+    background-color: rgba(0, 255, 150, 0.1);
+    border: 1px solid #00ff9d;
+}
+
+/* Error box */
+div[data-baseweb="notification"][kind="error"] {
+    background-color: rgba(255, 0, 80, 0.1);
+    border: 1px solid #ff0050;
+}
+
+/* Info box */
+div[data-baseweb="notification"][kind="info"] {
+    background-color: rgba(0, 180, 216, 0.1);
+    border: 1px solid #00b4d8;
+}
+
+/* =========================
+   SCAN LINE EFFECT (OPTIONAL UI HOOK)
+========================= */
+.scan-line {
+    position: relative;
+    overflow: hidden;
+}
+
+.scan-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00e5ff, transparent);
+    animation: scanMove 1.2s linear infinite;
+}
+
+@keyframes scanMove {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* =========================
+   DIVIDERS
+========================= */
+hr {
+    border: 1px solid rgba(0, 229, 255, 0.2);
+}
